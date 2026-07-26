@@ -62,3 +62,25 @@ Sources: [pbpstats docs](https://pbpstats.readthedocs.io/) ·
 [darko.app](https://www.darko.app/) ·
 [nbarapm.com](https://www.nbarapm.com/datasets/nba) ·
 [NBA player tracking (Wikipedia)](https://en.wikipedia.org/wiki/Player_tracking_(National_Basketball_Association))
+
+## Broadcast-video computer-vision datasets (verified 2026-07-26)
+
+Raw tracking output stopped being public after 2015-16, but a different
+family of public data has grown up since: computer-vision datasets built
+from NBA broadcast footage. These provide video plus annotations, not
+court-coordinate tracking, so they complement rather than replace the
+SportVU archive:
+
+| Dataset | What it provides | Typical task |
+|---|---|---|
+| Basketball-51 | Short broadcast clips labeled by event (2pt/3pt/free throw, make/miss) | Action recognition |
+| NSVA | ~32k broadcast clips paired with play-by-play descriptions | Video understanding / captioning |
+| SportsMOT | Player bounding boxes in image coordinates across basketball/soccer/volleyball clips | Multi-object tracking |
+| DeepSportRadar | Player segmentation, re-identification, ball 3D localization, camera calibration | Vision pipeline components |
+
+The limiting facts for analytics use: broadcast cameras follow the ball
+(off-ball players leave frame), and image-space boxes only become court
+coordinates through calibration/homography, which carries its own error.
+The tracking study's README scopes the study these enable: broadcast
+pseudo-tracking, error-quantified against real tracking and gated on
+`LeagueDashPtStats` aggregates.

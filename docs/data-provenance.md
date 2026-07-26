@@ -17,7 +17,7 @@ full landscape of what exists.
 |---|---|---|
 | jersey-height-study | 1980-81 through 2024-25 (45 seasons) | Current: the span is the point |
 | playbyplay-study | 2023-24, full season | Most recent season with a complete, independently gateable archive at build time |
-| tracking-study | 2015-16 (10 games, raw 25 Hz) | **The only public raw tracking, ever** (see below) |
+| tracking-study | Raw frames 2015-16 (10 games, 25 Hz); published aggregates 2013-14 through 2025-26 | Raw: **the only public raw tracking, ever** (see below). Aggregates: current |
 | lineup-valuation-study | 2023-24 and 2025-26 | Current: includes the just-completed season |
 | shot-quality-study | NBA 2023-24, 2024-25, 2025-26; G League 2023-24; WNBA 2024 and 2025 | Current: three NBA seasons, two WNBA seasons |
 | draft-study | College 2011-2022; NBA outcomes 2011-12 through 2024-25 | By design: the 2022 class needs three NBA seasons of outcomes to score |
@@ -48,10 +48,19 @@ aggregates before trusting them, calibrate the play-by-play clock lag per
 game before joining sources (2.5 to 6.0 seconds of scorer latency in this
 sample), and hold out an event type the calibration never saw. The one
 descriptive result (spacing shapes shot profile more than raw efficiency)
-is bounded to its ten-game sample in the study's own limitations. The
-aggregate side of the modern feed does appear in the family: the study's
-validation gate uses `LeagueDashPtStats` published numbers, which is
-exactly the slice of tracking the league still shares.
+is bounded to its ten-game sample in the study's own limitations.
+
+The aggregate side of the modern feed is used twice: the study's
+validation gate checks the 2015-16 frames against `LeagueDashPtStats`
+published numbers, and a longitudinal extension harvests that same
+endpoint for all thirteen tracking-era seasons (2013-14 through 2025-26)
+with a player-vs-team reconciliation gate per season. So the study's
+tracking coverage runs to the current season; only the raw frames stop
+where the league stopped publishing them. For the broadcast-video
+computer-vision route (Basketball-51, NSVA, SportsMOT, DeepSportRadar),
+see the survey: they provide video and annotations rather than tracking
+output, and the tracking study's README scopes the pseudo-tracking
+follow-on they enable.
 
 ## Source detail by study
 
@@ -81,7 +90,10 @@ exactly the slice of tracking the league still shares.
 - **stats.nba.com `PlayByPlayV3`** for the same 10 games: the join
   target.
 - **stats.nba.com `LeagueDashPtStats` (SpeedDistance)**: the league's own
-  published aggregates, used as the external validation gate.
+  published aggregates, used two ways: as the external validation gate
+  for the 2015-16 frames, and harvested for every season 2013-14 through
+  2025-26 (player and team level, reconciled against each other) for the
+  league-movement trend.
 
 ### lineup-valuation-study
 

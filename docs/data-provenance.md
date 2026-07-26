@@ -15,7 +15,7 @@ full landscape of what exists.
 
 | Study | Data seasons | Currency |
 |---|---|---|
-| jersey-height-study | 1980-81 through 2024-25 (45 seasons) | Current: the span is the point |
+| jersey-height-study | 1980-81 through 2025-26 (46 seasons) | Current: includes the just-completed season |
 | playbyplay-study | 2023-24, full season | Most recent season with a complete, independently gateable archive at build time |
 | tracking-study | Raw frames 2015-16 (10 games, 25 Hz); published aggregates 2013-14 through 2025-26 | Raw: **the only public raw tracking, ever** (see below). Aggregates: current |
 | lineup-valuation-study | 2023-24 and 2025-26 | Current: includes the just-completed season |
@@ -68,8 +68,8 @@ planned for the family (design in the tracking study's README).
 
 - **stats.nba.com `CommonTeamRoster`** (via nba_api): jersey number,
   listed height, position, and age for every team-season, 1980-81 through
-  2024-25. 18,399 player-seasons. One call per team-season, cached and
-  resumable. The 45-season span is the analysis: the 2019-20
+  2025-26. 18,947 player-seasons. One call per team-season, cached and
+  resumable. The 46-season span is the analysis: the 2019-20
   measured-height rule change is only visible against decades of context.
 
 ### playbyplay-study

@@ -81,6 +81,7 @@ SportVU archive:
 The limiting facts for analytics use: broadcast cameras follow the ball
 (off-ball players leave frame), and image-space boxes only become court
 coordinates through calibration/homography, which carries its own error.
-The tracking study's README scopes the study these enable: broadcast
-pseudo-tracking, error-quantified against real tracking and gated on
-`LeagueDashPtStats` aggregates.
+The study these enable, broadcast pseudo-tracking error-quantified
+against real tracking and gated on `LeagueDashPtStats` aggregates, is
+planned as the family's next build; the design lives in the tracking
+study's README.

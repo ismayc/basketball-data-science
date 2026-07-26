@@ -59,8 +59,8 @@ tracking coverage runs to the current season; only the raw frames stop
 where the league stopped publishing them. For the broadcast-video
 computer-vision route (Basketball-51, NSVA, SportsMOT, DeepSportRadar),
 see the survey: they provide video and annotations rather than tracking
-output, and the tracking study's README scopes the pseudo-tracking
-follow-on they enable.
+output, and the pseudo-tracking study they enable is the next build
+planned for the family (design in the tracking study's README).
 
 ## Source detail by study
 

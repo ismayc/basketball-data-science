@@ -26,7 +26,7 @@ independent external data, and explicit about its limitations.
 |---|---|---|
 | [jersey-height-study](https://github.com/ismayc/jersey-height-study) | 46 seasons of rosters (19k player-seasons) | The "players are getting shorter" trend is ~70% a 2019 measurement-rule change, proven within-player and with a regime-shift model |
 | [playbyplay-study](https://github.com/ismayc/playbyplay-study) | Full 2023-24 play-by-play (1,230 games) | The <abbr title="Shooting early with 25-36 seconds left in a period so your team gets two possessions to the opponent's one before the buzzer.">2-for-1</abbr> adds a real possession at no shot-quality cost; on **net** points the comparable-sample edge is ~+0.2 and not distinguishable from zero |
-| [tracking-study](https://github.com/ismayc/tracking-study) | 7.5M frames of raw 25 Hz <abbr title="The NBA's 2013-16 optical tracking system: x,y for all ten players (plus z for the ball) at 25 frames per second.">SportVU</abbr> + play-by-play join | Possession heuristic validated at 97.5%/93.5% after discovering a 2.5–6 s per-game clock latency that fabricates findings if unhandled |
+| [tracking-study](https://github.com/ismayc/tracking-study) | 7.5M frames of raw 25 Hz <abbr title="The NBA's 2013-16 optical tracking system: x,y for all ten players (plus z for the ball) at 25 frames per second.">SportVU</abbr> + play-by-play join | Possession heuristic validated at 97.6%/94.0% after discovering a 2.5–6 s per-game clock latency that fabricates findings if unhandled |
 | [lineup-valuation-study](https://github.com/ismayc/lineup-valuation-study) | Every five-man lineup, 2023-24 and 2025-26; 69,767 <abbr title="A stretch of game time with no substitution at either end - the unit of observation for the stint-level RAPM model.">stints</abbr> | <abbr title="Regularized adjusted plus-minus: a ridge regression crediting each player with net points per 100 possessions while adjusting for the other nine players on the floor.">RAPM</abbr>-family player & lineup value with exact team-total reconstruction and honest ±2–3 pts/100 error bars |
 | [shot-quality-study](https://github.com/ismayc/shot-quality-study) | All 218,701 shots of 2023-24 (+94k G League, +71k WNBA) | <abbr title="The model's probability that a given shot goes in, estimated from location and shot type; the per-shot building block behind xPPS and xPTS.">xMake</abbr>/<abbr title="Expected points: the modeled make probability times the shot's point value, summed over attempts.">xPTS</abbr> model separating shot **selection** from shot **making**; selection repeats (r ≈ .9), making half-repeats (r ≈ .6); an <abbr title="Estimate the spread of true skill across the league from the data, then pull each individual's noisy estimate toward the league mean in proportion to its noise.">empirical-Bayes</abbr> projection built on that beats naive carry-forward by ~10% out of sample |
 | [draft-study](https://github.com/ismayc/draft-study) | 56,781 college player-seasons + 12 draft classes | On held-out drafts, college box-score stats add **nothing** beyond the pick (the scouts already priced them in); byproduct: a pick-value curve for trades |
@@ -48,11 +48,13 @@ independent external data, and explicit about its limitations.
   play-by-play study, and a dplyr sequential-`summarise` masking bug that
   silently degraded an SE column, while every sum and ranking still
   matched.
-- **Generated findings.** Five of the six study READMEs have their
-  Findings section written by a script from `output/` files, never typed;
-  the tracking README, which predates that convention, carries its
-  numbers by hand from the same gated outputs. Every number elsewhere
-  (narrative pages, briefs) traces to a committed, gated output file.
+- **Generated findings.** No analysis number in any study README is
+  typed by hand: every Findings section and numeric block is written by
+  that study's findings script from committed `output/` files, and a
+  per-study drift gate fails the checks if a README stops matching what
+  the outputs say. The narrative pages and briefs are hand-written prose,
+  but a family-wide gate re-verifies every number in them against the
+  same committed outputs on every check run.
 - **External validation before self-reporting.** Tracking metrics reproduce
   the NBA's published aggregates; lineup tables reconstruct official team
   totals exactly; the roster pipeline reproduces the Bill Russell #6

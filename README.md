@@ -48,8 +48,11 @@ independent external data, and explicit about its limitations.
   play-by-play study, and a dplyr sequential-`summarise` masking bug that
   silently degraded an SE column, while every sum and ranking still
   matched.
-- **Generated findings.** No number in any README is typed by hand;
-  findings sections are regenerated from `output/` by a script.
+- **Generated findings.** Five of the six study READMEs have their
+  Findings section written by a script from `output/` files, never typed;
+  the tracking README, which predates that convention, carries its
+  numbers by hand from the same gated outputs. Every number elsewhere
+  (narrative pages, briefs) traces to a committed, gated output file.
 - **External validation before self-reporting.** Tracking metrics reproduce
   the NBA's published aggregates; lineup tables reconstruct official team
   totals exactly; the roster pipeline reproduces the Bill Russell #6

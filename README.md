@@ -58,7 +58,7 @@ independent external data, and explicit about its limitations.
   trail of issues found and fixed is public in
   [docs/analysis-audit.md](docs/analysis-audit.md).
 - **Documented provenance.** Every source and its season vintage is
-  catalogued in [docs/data-provenance.md](docs/data-provenance.md),
+  cataloged in [docs/data-provenance.md](docs/data-provenance.md),
   including why the one non-current source (raw 2015-16 <abbr title="The NBA's 2013-16 optical tracking system: x,y for all ten players (plus z for the ball) at 25 frames per second.">SportVU</abbr>) is the
   only public option for raw tracking work.
 - **Defined terms.** Every term of art is defined at the top of each

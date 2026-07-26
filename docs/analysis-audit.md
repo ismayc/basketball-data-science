@@ -119,7 +119,7 @@ AIC scan puts the best single knot near 2010, not 1990).
 
 Added `height_regime`: knots at 1990 and 2002 **plus a level-shift term at
 2019**. R² 0.85, AIC −54 vs +10. The shift term estimates the rule-change step
-directly: **−0.636 in, 95% CI [−0.801, −0.472]**, a modelled estimate with
+directly: **−0.636 in, 95% CI [−0.801, −0.472]**, a modeled estimate with
 uncertainty instead of an eyeballed difference of consecutive seasons. The
 original piecewise model is retained for continuity; findings quote both.
 

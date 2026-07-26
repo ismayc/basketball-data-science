@@ -16,7 +16,7 @@ frozen at 2015-16 with nothing newer public.**
 | [shufinskiy/nba_data](https://github.com/shufinskiy/nba_data) | bulk pre-scraped pbp (stats + data.nba + pbpstats variants), shot details | through 2024-25 at survey time | ✅ **Wired in**: feeds both the possession analysis and the stint builder (`lineup-valuation-study/data/pbp_bulk/`) |
 | [shufinskiy/nba-on-court](https://github.com/shufinskiy/nba-on-court) | fills **players-on-court** into pbp rows | current | ✅ **Wired in**: `05_build_stints.py` + `06_stint_rapm.py`: full opponent-adjusted stint RAPM, validated (two caveats found: it rewrites PCTIMESTRING to elapsed seconds, and its boxscore fallback needs `timeout=` raised) |
 | [hoopR](https://github.com/sportsdataverse/hoopR) (sportsdataverse) | ESPN + NBA pbp/box, R-native data releases | current | Alternative R-side feed; different event coding |
-| [dunksandthrees EPM](https://dunksandthrees.com/epm/actual), [DARKO](https://www.darko.app/), [nbarapm.com](https://www.nbarapm.com/) | modelled player value (EPM / DPM / RAPM) | current incl. 2025-26 | Used as *qualitative* reference points for the valuation study's face-validity check; no bulk CSV download confirmed, so not wired into the pipeline |
+| [dunksandthrees EPM](https://dunksandthrees.com/epm/actual), [DARKO](https://www.darko.app/), [nbarapm.com](https://www.nbarapm.com/) | modeled player value (EPM / DPM / RAPM) | current incl. 2025-26 | Used as *qualitative* reference points for the valuation study's face-validity check; no bulk CSV download confirmed, so not wired into the pipeline |
 
 ## Newly verified 2026-07-26 (all probed with working requests)
 

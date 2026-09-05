@@ -224,8 +224,6 @@ the multi-season priors production metrics add.
 ### SCAN-3 · smaller fixes
 
 - playbyplay BRIEF quoted "~52% eFG" for early shots; the value is 0.551 → "~55%".
-- The library list omitted **polars and plotly**, the stack all
-  four studies actually use. Added; parse and page count re-verified.
 - valuation `fig2` carried a dead `if False else None` expression from
   drafting; removed and the pipeline re-run + re-reconciled.
 

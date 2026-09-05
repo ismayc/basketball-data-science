@@ -1,7 +1,7 @@
 # Gotchas in the public NBA data stack
 
-*Recorded 2026-07-25, after each of these cost real debugging time during the
-these builds. Fuller evidence: `../analysis-audit.md` and
+*Recorded 2026-07-25, after each of these cost real debugging time while
+building the studies. Fuller evidence: `../analysis-audit.md` and
 `../public-data-availability.md`; every item below is also guarded by a code
 comment, test, or validation gate at the place it bit.*
 

@@ -34,7 +34,7 @@ block at the top of each analysis and wraps each use in a hover tooltip
 | **log loss** | Negative average log-likelihood of the outcomes under the predicted probabilities; punishes confident wrong predictions. |
 | **CI** | Confidence interval. |
 | **Spearman** | Rank correlation: correlation of the orderings rather than the raw values. |
-| **corner three** | A three-pointer from the corner, where the NBA line is roughly 3 ft closer than the arc - the geometry discount that makes it the cheapest three. |
+| **corner three** | A three-pointer from the corner, where the NBA line is about 1.75 ft closer than the arc (22 ft vs 23 ft 9 in) - the geometry discount that makes it the cheapest three. |
 | **SportVU** | The NBA's 2013-16 optical tracking system: x,y for all ten players (plus z for the ball) at 25 frames per second. |
 | **window function** | SQL construct computing a value over a set of rows related to the current row (a rank, running total, or centered average) without collapsing them. |
 | **DuckDB** | An in-process analytical SQL engine that queries CSV and parquet files directly, with no server or load step. |

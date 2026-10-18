@@ -18,6 +18,22 @@ Built 2026-07-26. Two layers, both wired into the family check suite:
    unless allowlisted with a written reason; the allowlist holds only a
    handful of reconcile-tolerance magnitudes that the gates verify live.
 
+   **Correction, October 18, 2026: layer 2 never verified anything.** It
+   matched each token against one pool of every numeric cell in every
+   study's `output/` (1,066,841 values, gitignored local files included),
+   and 400 of 400 random wrong numbers passed at one decimal, one decimal
+   with %, and two decimals. A wrong "40.7%" injected into the playoff
+   series story passed. Re-scoped to each study's git-tracked outputs, 32
+   tokens in five studies matched nothing: they had passed only on
+   coincidental values in other studies. Two more were missed only by
+   bugs that the large pool hid: a row count cut off by a capped file
+   listing, and negative proportions shown as unsigned percentages. The
+   interim gate (tools, October 18) scopes the pool per study, leaves
+   `gen:` regions to their generators, marks those 32 tokens UNVERIFIED in
+   the allowlists, and prints each file's measured chance that a nearby
+   wrong number still passes (median 86%). Exact per-number bindings to
+   output cells are the replacement. Layer 1 is unaffected.
+
 Why it exists: the first generator runs caught four real drifts that
 hand-carried prose had accumulated, including a validation rate quoted
 as 97.5% that the committed gate output puts at 97.6%. Careful hands

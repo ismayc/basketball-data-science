@@ -104,9 +104,10 @@ planned for the family (design in the tracking study's README).
   independent references that gate the lineup tables (team totals must
   reconstruct exactly).
 - **shufinskiy/nba_data bulk play-by-play (`nbastats_2023`)** plus the
-  **nba-on-court** package (offline substitution logic): the 69,767-stint
+  **nba-on-court** package (offline substitution logic): the 62,658-stint
   dataset behind the opponent-adjusted stint RAPM, all 1,230 games of
-  2023-24.
+  2023-24 (rebuilt October 19, 2026 in game-clock order, with free throws
+  credited at the foul).
 
 ### shot-quality-study
 

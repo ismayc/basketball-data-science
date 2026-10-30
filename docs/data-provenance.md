@@ -23,6 +23,7 @@ full landscape of what exists.
 | draft-study | College 2011-2022; NBA outcomes 2011-12 through 2024-25 | By design: the 2022 class needs three NBA seasons of outcomes to score |
 | scouting one-pagers | 2025-26, full season | Current |
 | SQL layer | The same files as the studies above | Mirrors them |
+| nba-season-data | 2025-26 player tables and box scores; NBA Draft Combine 2001 through 2027 | Current: includes the just-completed season |
 
 ## The tracking question, answered directly
 

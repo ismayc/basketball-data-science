@@ -37,6 +37,7 @@ independent external data, and explicit about its limitations.
 |---|---|
 | [basketball-sql-layer](https://github.com/ismayc/basketball-sql-layer) | The family's headline tables re-expressed as <abbr title="An in-process analytical SQL engine that queries CSV and parquet files directly, with no server or load step.">DuckDB</abbr> <abbr title="SQL construct computing a value over a set of rows related to the current row (a rank, running total, or centered average) without collapsing them.">window-function</abbr> SQL, reconciled column-for-column against the polars outputs (observed diff exactly 0.0) |
 | [nba-scouting-onepagers](https://github.com/ismayc/nba-scouting-onepagers) | Auto-generated opponent scouting one-pagers for all 30 teams, full 2025-26 season, with a byte-for-byte staleness gate |
+| [nba-season-data](https://github.com/ismayc/nba-season-data) | Season player tables (per-100, shooting, box scores) and NBA Draft Combine measurements as plain CSV, built from pinned hoopR files and readable in a browser |
 | [basketball-analysis-tools](https://github.com/ismayc/basketball-analysis-tools) | Shared tooling: the glossary/tooltip engine, nba_api compatibility shims, cross-study identity tests, and the family-wide check orchestrator |
 
 ## Analysis standards

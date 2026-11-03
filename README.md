@@ -22,14 +22,45 @@ independent external data, and explicit about its limitations.
 
 ## The studies
 
+Grouped by the question each one answers. [Read them as narratives on the family page](https://chesterismay.com/basketball-data-science/).
+
+### Game strategy and endings
+
+| Repo | Data | Headline |
+|---|---|---|
+| [safe-lead-study](https://github.com/ismayc/safe-lead-study) | Every regular-season game: 35,492 NBA (1996-97 to 2025-26) and 6,469 WNBA (1997 to 2026) | A double-digit lead entering the fourth is less safe than it was: NBA teams down 10 to 14 won 5.8% of the time in the first five seasons and 10.1% in the last five |
+| [playbyplay-study](https://github.com/ismayc/playbyplay-study) | Play-by-play for NBA 2023-24 to 2025-26 (1,230 games each) and WNBA 2024 to 2026 | The <abbr title="Shooting early with 25-36 seconds left in a period so your team gets two possessions to the opponent's one before the buzzer.">2-for-1</abbr> adds a real possession at no shot-quality cost; on **net** points the comparable-sample edge is ~+0.2, and above zero pooled over three NBA seasons (corrected October 19, 2026) |
+| [elam-ending-study](https://github.com/ismayc/elam-ending-study) | 4,866 games, the last three seasons of each league, replayed under a target-score ending | The Elam Ending would change the winner of about 3% of games and barely move the leader's odds, while cutting the slowest minutes in basketball: a close NBA game's last two minutes take 10.2 real minutes |
+
+### Shooting and offense
+
+| Repo | Data | Headline |
+|---|---|---|
+| [shot-quality-study](https://github.com/ismayc/shot-quality-study) | All 218,701 shots of 2023-24 (+94k G League, +71k WNBA) | <abbr title="The model's probability that a given shot goes in, estimated from location and shot type; the per-shot building block behind xPPS and xPTS.">xMake</abbr>/<abbr title="Expected points: the modeled make probability times the shot's point value, summed over attempts.">xPTS</abbr> model separating shot **selection** from shot **making**; selection repeats (r ≈ .9), making half-repeats (r ≈ .6); an <abbr title="Estimate the spread of true skill across the league from the data, then pull each individual's noisy estimate toward the league mean in proportion to its noise.">empirical-Bayes</abbr> projection built on that beats naive carry-forward by ~10% out of sample |
+| [heliocentrism-study](https://github.com/ismayc/heliocentrism-study) | Every regular-season game: 35,492 NBA and 6,469 WNBA | NBA offenses did not become solar systems: the top creator's per-game share slipped from 31.5% to 30.5% between the first and last five seasons; by 2026 the WNBA was the more concentrated league |
+| [playoff-series-study](https://github.com/ismayc/playoff-series-study) | Every NBA and WNBA postseason with complete three-point records | Game 1 three-point accuracy is not worse than the rest of the series (NBA -0.03 points); NBA teams just take fewer threes in Game 1, and the share climbs through Game 7 |
+
+### Player value and contracts
+
+| Repo | Data | Headline |
+|---|---|---|
+| [lineup-valuation-study](https://github.com/ismayc/lineup-valuation-study) | Every five-man lineup, 2023-24 and 2025-26; 62,658 <abbr title="A stretch of game time with no substitution at either end - the unit of observation for the stint-level RAPM model.">stints</abbr> | <abbr title="Regularized adjusted plus-minus: a ridge regression crediting each player with net points per 100 possessions while adjusting for the other nine players on the floor.">RAPM</abbr>-family player & lineup value with exact team-total reconstruction and honest ±2–3 pts/100 error bars |
+| [contract-year-study](https://github.com/ismayc/contract-year-study) | NBA free agency, 2000 to 2026 | Role players do a little better in contract years (+0.21 Box Plus/Minus) and stars do not (-0.25); the analysis plan was fixed before any outcome was looked at |
+| [mebounds](https://github.com/ismayc/mebounds) | WNBA and NBA play-by-play, 2024 to 2026 | Angel Reese's "mebound" is measurably earned: 132 career mebounds, 11.9% of her rebounds, and the WNBA lead in mebound count in all three seasons |
+
+### The draft
+
+| Repo | Data | Headline |
+|---|---|---|
+| [draft-study](https://github.com/ismayc/draft-study) | 56,781 college player-seasons + 12 draft classes | On held-out drafts, college box-score stats add **nothing** beyond the pick (the scouts already priced them in); byproduct: a pick-value curve for trades |
+| [draft-potential-by-team](https://github.com/ismayc/draft-potential-by-team) | Every draft class of the two-round era, priced by slot | OKC leads at +489 Win Shares above slot, but 27 of 30 franchise intervals cross zero: provable draft skill is rare |
+
+### Measurement and data quality
+
 | Repo | Data | Headline |
 |---|---|---|
 | [jersey-height-study](https://github.com/ismayc/jersey-height-study) | 46 seasons of rosters (19k player-seasons), plus every WNBA season | The "players are getting shorter" trend is ~75% a 2019 measurement-rule change, proven within-player and with a regime-shift model; the WNBA never had the big-man-big-number convention the NBA lost |
-| [playbyplay-study](https://github.com/ismayc/playbyplay-study) | Play-by-play for NBA 2023-24 to 2025-26 (1,230 games each) and WNBA 2024 to 2026 | The <abbr title="Shooting early with 25-36 seconds left in a period so your team gets two possessions to the opponent's one before the buzzer.">2-for-1</abbr> adds a real possession at no shot-quality cost; on **net** points the comparable-sample edge is ~+0.2, and above zero pooled over three NBA seasons (corrected October 19, 2026) |
 | [tracking-study](https://github.com/ismayc/tracking-study) | 7.5M frames of raw 25 Hz <abbr title="The NBA's 2013-16 optical tracking system: x,y for all ten players (plus z for the ball) at 25 frames per second.">SportVU</abbr> + play-by-play join | Possession heuristic validated at 97.6%/94.0% after discovering a 2.5–6 s per-game clock latency that fabricates findings if unhandled |
-| [lineup-valuation-study](https://github.com/ismayc/lineup-valuation-study) | Every five-man lineup, 2023-24 and 2025-26; 62,658 <abbr title="A stretch of game time with no substitution at either end - the unit of observation for the stint-level RAPM model.">stints</abbr> | <abbr title="Regularized adjusted plus-minus: a ridge regression crediting each player with net points per 100 possessions while adjusting for the other nine players on the floor.">RAPM</abbr>-family player & lineup value with exact team-total reconstruction and honest ±2–3 pts/100 error bars |
-| [shot-quality-study](https://github.com/ismayc/shot-quality-study) | All 218,701 shots of 2023-24 (+94k G League, +71k WNBA) | <abbr title="The model's probability that a given shot goes in, estimated from location and shot type; the per-shot building block behind xPPS and xPTS.">xMake</abbr>/<abbr title="Expected points: the modeled make probability times the shot's point value, summed over attempts.">xPTS</abbr> model separating shot **selection** from shot **making**; selection repeats (r ≈ .9), making half-repeats (r ≈ .6); an <abbr title="Estimate the spread of true skill across the league from the data, then pull each individual's noisy estimate toward the league mean in proportion to its noise.">empirical-Bayes</abbr> projection built on that beats naive carry-forward by ~10% out of sample |
-| [draft-study](https://github.com/ismayc/draft-study) | 56,781 college player-seasons + 12 draft classes | On held-out drafts, college box-score stats add **nothing** beyond the pick (the scouts already priced them in); byproduct: a pick-value curve for trades |
 
 ## The layers on top
 
